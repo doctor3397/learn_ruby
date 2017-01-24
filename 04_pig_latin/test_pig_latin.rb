@@ -37,6 +37,7 @@ class TestPigLatin < MiniTest::Test
     assert_equal "oolschay", s
   end
 
+
   def test_translates_qu_as_phoneme
     s = translate("quiet")
     assert_equal "ietquay", s
