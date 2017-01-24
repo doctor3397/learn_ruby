@@ -35,7 +35,18 @@ class Temperature
     Temperature.new({:c => t})
   end
 
+end
 
+class Celsius < Temperature
+  def initialize(temp)
+    super(:c => temp)
+  end
+end
+
+class Fahrenheit < Temperature
+  def initialize(temp)
+    super(:f => temp)
+  end
 end
 
 # t1 = Temperature.new({:f => 50})
