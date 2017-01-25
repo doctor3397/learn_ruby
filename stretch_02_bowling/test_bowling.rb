@@ -18,10 +18,6 @@ class TestGame < MiniTest::Test
     @game = Game.new
   end
 
-  def test_score_300_for_perfect_game
-    score = 12.times.map { 10 }
-    assert_equal 300, @game.score(score)
-  end
 
   def test_score_0_for_gutter_game
     score = 12.times.map { 0 }
@@ -39,7 +35,8 @@ class TestGame < MiniTest::Test
   end
 
   def test_score_24_when_strike_is_followed_by_3_and_4
-    score = [10,3,4] + 17.times.map { 0 }
+    #score = [10,3,4] + 17.times.map { 0 }
+    score = [10,0,3,4] + 16.times.map { 0 }
     assert_equal 24, @game.score(score)
   end
 
@@ -53,8 +50,15 @@ class TestGame < MiniTest::Test
     assert_equal 20, @game.score(score)
   end
 
+  def test_score_300_for_perfect_game
+    #score = 12.times.map { 10 }
+    score = [10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 10]
+    assert_equal 300, @game.score(score)
+  end
+
   def test_score_150_for_all_5
-    score = 21.times.map { 5 }
+    #score = 21.times.map { 5 }
+    score = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0]
     assert_equal 150, @game.score(score)
   end
 end
