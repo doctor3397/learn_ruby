@@ -68,4 +68,5 @@ class TestDictionary < MiniTest::Test
     # Enter %w(apple fish zebra) in irb and see what happens
     assert_equal %w(apple fish zebra), @d.keywords
   end
+
 end
