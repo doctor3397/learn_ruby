@@ -100,4 +100,5 @@ class TestSillyBlocks < MiniTest::Test
 
     assert_equal 10, n
   end
+
 end
