@@ -75,4 +75,5 @@ class TestBook < MiniTest::Test
     @book.title = "the man in the iron mask"
     assert_equal "The Man in the Iron Mask", @book.title
   end
+
 end
